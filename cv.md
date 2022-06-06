@@ -6,7 +6,7 @@
 *GitHub:zEtYxA.
 ----
 ## About me:
-_higher education. Graduated from the Belarusian National Technical University. Specialty - power engineer. I work at a nuclear power plant. Purposeful. Have experience of working in a team._
+_Purposeful. Have experience of working in a team._
 ------
 ## Skills:
 *Pascal
@@ -20,6 +20,13 @@ function multiply(a, b){
 let a= multiply(2,2)
 console.log(a)`
 ***
+## Education:
+* Belarusian National Technical University .Specialty - power engineer,
+---
+## Languages:
+*Russian- Native,
+*English - A1.
+
 
 
 
