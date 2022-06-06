@@ -11,7 +11,7 @@
 ##### _Purposeful. Have experience of working in a team._
 
 ## Skills:
-##### * Pascal  
+* Pascal  
 
 ##### * Delphi  
 
