@@ -1,0 +1,43 @@
+.namee {
+   font-style: italic;
+   color:black;
+   font-size: 100px;
+   text-align: center;
+}
+.p {
+   font-style: italic;
+   color: aqua;
+
+}
+.table {
+   width:50%;
+margin:auto;
+
+
+}
+.nav {
+   background-color:#B5BABD;
+   width:40%;
+}
+.mame{
+   text-align: LEFT;
+   font-size:80px;
+}
+.info-nav{
+   font-size:40px;
+   
+}
+.info{
+   font-size:50px;
+}
+.bod{
+   background-color: #B5BABD;
+}
+.foto{
+   border: 0px;
+   
+}
+.foot{
+  text-align: center;
+  font-size: 40px;
+}
