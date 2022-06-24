@@ -513,6 +513,9 @@ border-radius: 10px;
 .butt:hover{
   background:rgb(23 113 130);
   }
+  .butt:active{
+    font-size: 20px;
+  }
 
  /*header styles end*/
   /*main styles start*/
@@ -540,13 +543,15 @@ line-height: 24px;
 color: #FFFFFF;
 margin-bottom: 46px;
   }
-  .search-form__field{
-    background: transparent;
+  
+  .search-form__field{  
     background: rgba(255, 255, 255, 0.7);
     border-radius: 16px;
     width: 892px;
     height: 92px;
-    
+    font-size:35px;
+    color:#F2785C;
+    ;
   }
   .search-form__field::placeholder{
   font-style: italic;
@@ -682,13 +687,14 @@ background: #0D606F;
 box-shadow: 0px 0px 3px rgba(13, 96, 111, 0.08), 0px 2px 3px rgba(13, 96, 111, 0.16);
 border-radius: 10px;
 color: white;
+
 }
 
 /*destinitions  styles end*/
 
 /*travel  styles start*/
 .travel__title{
-  opacity: 100%;
+  
   text-align: center;
   font-family: 'Red Hat Text';
   font-style: normal;
@@ -698,20 +704,24 @@ color: white;
     color: #F2785C;
     margin-bottom: 40px;
 }
+
 .travel__fon{
+  
   font-family:'Aleo';
   min-height: 100vh;
-  background:url(img/bgfooter.jpg) no-repeat ;
+  background:url(img/bg_travel.jpg) no-repeat ;
   background-size: cover; /*картинка вписывается при любых размерах окна*/
+ 
 
 }
-  .travel__opacity{
-   /* min-height: 100vh;
-    background:url(img/bg_white.jpg) no-repeat ;
-    background-size: cover;*/
-   }
+.travel__fon-rgba{
+  padding-bottom: 40px;
+  background-color: rgba(255, 255, 255, 0.7)
+  
+ }
 
 .travel__story{
+  
   display: flex;
   justify-content: center;
   }
@@ -750,7 +760,7 @@ text-decoration-line: underline;
   margin-right: auto;
   display: block;
   margin-top: 40px;
-  margin-bottom: 55px;
+ 
   height: 59px;
   width: 228px;
   font-family: Red Hat Text;
@@ -771,8 +781,11 @@ color: white;
   display: flex;  
   justify-content: space-between;
   align-items: center;
+  padding-top: 14px;
 }
 .footer-text{
+  padding-top: 14px;
+  
   font-family: 'Red Hat Text';
 font-style: normal;
 font-weight: 500;
@@ -784,9 +797,14 @@ line-height: 21px;
 
 .destinitions__find:hover,.travel__find:hover{
  background:rgb(23 113 130);
-
 }
-.footer{
+.destinitions__find:active,.travel__find:active,.search-form__submit:active{
+  font-size: 30px;
+}
 
-background:url(img/fototerbg.jpg) no-repeat ;
-background-size: cover;}
+.footer{
+  
+height: 61px;}
+
+  /*  background:url(img/fototerbg.jpg) no-repeat ;
+  background-size: cover;}*/
