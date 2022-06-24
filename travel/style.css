@@ -424,9 +424,12 @@ textarea {
    box-sizing: inherit;  /*herit заставляет в элементе использовать вычисленное значение свойства из родительского элемента.*/
  }
 
- 
+ html {
+  scroll-behavior: smooth; /* свойство scroll-behavior не наследуется, применяется к прокручиваемым блокам */ 
+}
  body {
    margin:0px;
+   
  }
  /*header styles*/
  .header{
@@ -490,7 +493,8 @@ line-height: 21px;
 color: #FFFFFF;
 text-decoration: none;
 }
-.header__link:hover,.header__link:focus,.header__link:active{
+.header__link:hover,.header__link:focus,.header__link:active,
+.header__logo:hover,.header__logo:focus,.header__logo:active{
 opacity: 0.75;
 }
 .butt{
@@ -515,7 +519,7 @@ border-radius: 10px;
   .preview{
     font-family:'Aleo';
     min-height: 100vh;
-    background:url(img/bg.jpg) no-repeat ;
+    background:url(img/bg1.jpg) no-repeat ;
     background-size: cover;   /*картинка вписывается при любых размерах окна*/
     padding-top: 162px;
   }
@@ -621,15 +625,168 @@ font-weight: 500;
 font-size: 40px;
 line-height: 53px;
   margin-top: 97px;
+  margin-bottom: 46px;
   color: #F2785C;
   text-align: center;
 }
 .destinations__image{
   max-width: 1200px;
   display: flex;
-  text-align: center;
-  justify-content:space-around
+  text-align: end;
+  
 }
 .destinations__pict{
   padding-right: 60px;
 }
+
+.container__distinitions{
+ 
+  margin-top: 24px;
+  display: flex;
+  justify-content: center;
+}
+.destinitions__change{
+  margin-right: 10px;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #F2785C80;
+  border-radius: 50%;
+  background: #F2785C80;}
+  .destinitions__change2{
+    margin-right: 10px;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #F2785C;
+    border-radius: 50%;
+    background: #F2785C;
+} 
+.destinitions__change:active{
+  background: #F2785C;
+  
+}
+
+.destinitions__find{
+ 
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  margin-top: 40px;
+  margin-bottom: 90px;
+  height: 59px;
+  width: 228px;
+  font-family: Red Hat Text;
+font-size: 24px;
+font-weight: 500;
+line-height: 32px;
+background: #0D606F;
+box-shadow: 0px 0px 3px rgba(13, 96, 111, 0.08), 0px 2px 3px rgba(13, 96, 111, 0.16);
+border-radius: 10px;
+color: white;
+}
+
+/*destinitions  styles end*/
+
+/*travel  styles start*/
+.travel__title{
+  opacity: 100%;
+  text-align: center;
+  font-family: 'Red Hat Text';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 53px;
+    color: #F2785C;
+    margin-bottom: 40px;
+}
+.travel__fon{
+  font-family:'Aleo';
+  min-height: 100vh;
+  background:url(img/bgfooter.jpg) no-repeat ;
+  background-size: cover; /*картинка вписывается при любых размерах окна*/
+
+}
+  .travel__opacity{
+   /* min-height: 100vh;
+    background:url(img/bg_white.jpg) no-repeat ;
+    background-size: cover;*/
+   }
+
+.travel__story{
+  display: flex;
+  justify-content: center;
+  }
+.story-all{
+  padding-left: 40px;
+  font-family: 'Aleo';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 35px;
+  line-height: 42px;
+  /* identical to box height */
+  color: #0D606F;
+}
+.story__title{
+  padding-bottom: 24px;
+
+}
+.story__text{
+ 
+  font-size: 20px;
+  line-height: 24px;
+ 
+}
+.read-more{
+font-family: 'Aleo';
+font-style: normal;
+font-weight: 700;
+font-size: 20px;
+line-height: 24px;
+text-decoration-line: underline;
+
+}
+.travel__find{
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  margin-top: 40px;
+  margin-bottom: 55px;
+  height: 59px;
+  width: 228px;
+  font-family: Red Hat Text;
+font-size: 24px;
+font-weight: 500;
+line-height: 32px;
+background: #0D606F;
+box-shadow: 0px 0px 3px rgba(13, 96, 111, 0.08), 0px 2px 3px rgba(13, 96, 111, 0.16);
+border-radius: 10px;
+color: white;
+}
+.arrow{
+  padding-right: 10px ;
+  
+}
+/*travel  styles end*/
+.footer__container{
+  display: flex;  
+  justify-content: space-between;
+  align-items: center;
+}
+.footer-text{
+  font-family: 'Red Hat Text';
+font-style: normal;
+font-weight: 500;
+font-size: 16px;
+line-height: 21px;
+  margin-left: 465px;
+  color: white;
+}
+
+.destinitions__find:hover,.travel__find:hover{
+ background:rgb(23 113 130);
+
+}
+.footer{
+
+background:url(img/fototerbg.jpg) no-repeat ;
+background-size: cover;}
