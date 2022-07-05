@@ -433,7 +433,7 @@ textarea {
  }
  /*header styles*/
  .header{
-  height: 90px;
+  height: 100px;
 position: fixed; 
 top:0;
 left:0;
@@ -469,11 +469,17 @@ color: white;
   justify-content: space-between;
   align-items: flex-end;
   flex-wrap: wrap;
+  margin-top: 5px;
  
    
 }
 .header__nav{
-  padding-top: 35px;
+  padding-top: 0px;
+  padding-right: 30px;
+  
+}
+.header__btn{
+  padding-top:20px ;
 }
 .header__list{
   display: flex;
@@ -524,7 +530,7 @@ border-radius: 10px;
     min-height: 100vh;
     background:url(img/bg1.jpg) no-repeat ;
     background-size: cover;   /*картинка вписывается при любых размерах окна*/
-    padding-top: 162px;
+    padding-top: 130px;
   }
   .preview__title{
       font-style: normal;
@@ -601,6 +607,7 @@ border-radius: 10px;
   /* identical to box height */
     color: #F2785C;
     margin: 40px;
+    padding-top: 40px
 }
 .steps__conteiner{
   display: flex;
@@ -708,7 +715,7 @@ color: white;
 .travel__fon{
   
   font-family:'Aleo';
-  min-height: 100vh;
+  min-height: 82vh;
   background:url(img/bg_travel.jpg) no-repeat ;
   background-size: cover; /*картинка вписывается при любых размерах окна*/
  
@@ -726,7 +733,8 @@ color: white;
   justify-content: center;
   }
 .story-all{
-  padding-left: 40px;
+  padding-top: 40px;
+  padding-left: 35px;
   font-family: 'Aleo';
   font-style: normal;
   font-weight: 300;
@@ -805,6 +813,13 @@ line-height: 21px;
 .footer{
   
 height: 61px;}
+.footer-link{
+  display: flex;  ;
+ 
+}
+.footer-link-li{
+  padding-left: 20px;
+}
 
   /*  background:url(img/fototerbg.jpg) no-repeat ;
   background-size: cover;}*/
