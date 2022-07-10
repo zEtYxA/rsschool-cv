@@ -420,10 +420,6 @@ textarea {
  html{
    box-sizing: border-box;    /*размеры без паддингов*/
  }
- *,*::after,*::before{
-   box-sizing: inherit;  /*herit заставляет в элементе использовать вычисленное значение свойства из родительского элемента.*/
- }
-
  html {
   scroll-behavior: smooth; /* свойство scroll-behavior не наследуется, применяется к прокручиваемым блокам */ 
 }
@@ -439,19 +435,20 @@ top:0;
 left:0;
 width: 100%;
 background: #F2785CB2;
-
-
-
  }
+
+
 .wrapper{
    max-width: 1200px;
       margin: 0 auto;
+      padding:0 15px;
 }
 .wrapper2{
   max-width: 1440px;
      margin: 0 auto;
 }
 .header__logo{
+ 
   padding-top: 25px;
 }
 .header__logo-link{
@@ -467,20 +464,55 @@ color: white;
 .header__wrapper{
   display: flex;
   justify-content: space-between;
-  align-items: flex-end;
+  
   flex-wrap: wrap;
   margin-top: 5px;
  
    
 }
+.header__logo{
+  padding-top: 30px;;
+}
 .header__nav{
-  padding-top: 0px;
+  padding-top: 39px;
   padding-right: 30px;
   
 }
+@media(max-width:390px){
+  .header__nav{
+    display:none;
+  }}
+
 .header__btn{
-  padding-top:20px ;
+  padding-top:30px ;
 }
+.header__burger{
+  display: none;
+width: 40px;
+height: 28px;
+position: relative;
+
+}
+.burger__line{
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: white;
+  position: absolute;
+  left: 0;
+}
+.burger__line_first{
+  top: 0px;
+}
+.burger__line_second{
+  top: 50%;
+  transform: translateY(-50%);
+}
+.burger__line_third{
+  bottom: 0px;
+}
+
+
 .header__list{
   display: flex;
   flex-wrap: wrap;
@@ -527,7 +559,7 @@ border-radius: 10px;
   /*main styles start*/
   .preview{
     font-family:'Aleo';
-    min-height: 100vh;
+    min-height: 69vh;
     background:url(img/bg1.jpg) no-repeat ;
     background-size: cover;   /*картинка вписывается при любых размерах окна*/
     padding-top: 130px;
@@ -539,7 +571,7 @@ border-radius: 10px;
     line-height: 96px;
     color: #FFFFFF;
     max-width: 892px;
-    margin-bottom: 46px;
+    margin-bottom: 35px;
   }
   .preview__text{
  font-style: italic;
@@ -683,7 +715,7 @@ line-height: 53px;
   margin-right: auto;
   display: block;
   margin-top: 40px;
-  margin-bottom: 90px;
+  margin-bottom: 75px;
   height: 59px;
   width: 228px;
   font-family: Red Hat Text;
@@ -821,5 +853,77 @@ height: 61px;}
   padding-left: 20px;
 }
 
-  /*  background:url(img/fototerbg.jpg) no-repeat ;
-  background-size: cover;}*/
+  /* media start */
+  @media screen and (max-width:999px){
+    .header__btn{
+      display:none;
+    }
+    .header__burger{
+      display:block;}
+      .header__nav{
+        position:fixed;
+        width: 100%;
+        height: 100%;
+        left:0;
+        top:0;
+        background-color: #F2785C;
+        z-index: 10;
+        padding: 75px;
+        transform: translatex(100%);
+        transition: 0.2s all linear;
+              }
+    .header__nav_active{
+      transform: translatex(0);
+
+    }
+              .header__item{
+                width: 100%;
+                margin-right: 0;
+                margin-bottom: 10px;
+              }
+              .header__item:last-child{
+                margin-bottom: 0; 
+              }
+              .header__link{
+                font-family: 'Red Hat Text';
+font-style: normal;
+font-weight: 500;
+font-size: 16px;
+line-height: 21px;
+              }
+ .header__nav-close{
+width:40px ;
+height: 40px;
+position: absolute;
+top:20px;
+left: 20px;
+z-index: 11;
+}
+.header__nav-close-line{
+  display: block;
+  height: 2px;    
+  background-color: white;
+  position: absolute;
+  top: 50%;
+ width: 100%;
+}
+.header__nav-close-line:first-child{
+  transform:translateY(-50%) rotate(45deg) ;
+}
+.header__nav-close-line:last-child{
+  transform:translateY(-50%) rotate(-45deg) ;
+}
+
+
+  }
+   
+      
+  @media screen and (max-width:999px){
+    .header__btn{
+      display:none;
+    }}
+      
+    
+    
+   
+    /* media end */
