@@ -11,4 +11,7 @@ console.log('hello');
    burgeritemclose.addEventListener('click', () => {
       menu.classList.remove('header__nav_active');
    })
+   menu.addEventListener('click', () => {
+      menu.classList.remove('header__nav_active');
+   })
 }());
