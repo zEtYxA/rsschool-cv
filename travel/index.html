@@ -2,13 +2,15 @@
 <html lang="en">
 
 <head>
+
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
    <!--   <link rel="stylesheet" href="reset.css">-->
    <link rel="stylesheet" href="style.css">
 
-   <link rel="shortcut icon" href="img/Velo.svg">
+   <link rel="shortcut icon" href="img/velo.svg">
 
 
    <title>Trevel Portal</title>
@@ -21,7 +23,8 @@
          <div class="header__wrapper">
             <div class="header__logo">
                <a href="https://zetyxa.github.io/rsschool-cv/travel/" class="header__logo-link">
-                  <img src="img/Vector.svg" alt="logo">Trevel Portal
+                  <img src="img/Vector.svg" alt="logo">
+                  <span class="logo__text">Trevel Portal</span>
                </a>
             </div>
             <nav class="header__nav">
@@ -38,6 +41,13 @@
                   <li class="header__item">
                      <a href="#page4" class="header__link">Travel Stories</a>
                   </li>
+                  <li class="header__item item-burger">
+                     <a href="#page4" class="header__link">Account</a>
+                  </li>
+                  <li class="header__item item-burger">
+                     <a href="#page4" class="header__link">Social Media</a>
+                  </li>
+
                </ul>
                <div class="header__nav-close">
                   <span class="header__nav-close-line"></span>
@@ -45,9 +55,12 @@
 
                </div>
             </nav>
+
+
             <div class="header__btn">
                <button class="butt" type="submit">Login</button>
             </div>
+
             <div class="header__burger burger">
                <span class="burger__line burger__line_first"></span>
                <span class="burger__line burger__line_second"></span>
@@ -63,13 +76,15 @@
 
             <p class="preview__text">Receive personalized recommendations for countries, hotels, activities and more
             </p>
-            <form class="search-form">
-               <p class="serch-form__info">
-                  <input name="user-like-do" type="text" class="search-form__field"
-                     placeholder="     What would you like to do?">
-               </p>
-               <button class="search-form__submit" type="submit">Start Planning</button>
-            </form>
+            <div class="search" class="search-form">
+               <form class="search-form">
+                  <p class="search__text"> &nbsp; &nbsp; &nbsp;What would you like to do?</p>
+                  <p class="serch-form__info">
+                     <input name="user-like-do" type="text" class="search-form__field" placeholder="">
+                  </p>
+                  <button class="search-form__submit" type="submit">Start Planning</button>
+               </form>
+            </div>
          </div>
       </section>
       <section class="steps">
@@ -95,10 +110,24 @@
       <section class="destinations" id="page3">
          <div class="wrapper2">
             <h2 class="destinations__title">POPULAR DESTINATIONS</h2>
+            <span class="destinations-country">SPAIN</span>
             <div class="destinations__image">
-               <img src="img/Destination_1.jpg" alt="1" class="destinations__pict">
-               <img src="img/Destination_2.jpg" alt="2" class="destinations__pict">
-               <img src="img/Destination_3.jpg" alt="3">
+               <p class="destinations__image-cont">
+                  <img src="img/Destination_1.jpg" alt="1" class="destinations__pict">
+               </p>
+               <p class="destinations__image-cont">
+                  <img src="img/Destination_2.jpg" alt="2" class="destinations__pict2">
+
+               </p>
+               <p class="destinations__image-cont">
+                  <img src="img/Destination_3.jpg" alt="3" class="destinations__pict">
+
+               </p>
+               <p class="destinations__image-cont">
+                  <img src="img/Destination_4.jpg" alt="3" class="destinations__mobile">
+
+               </p>
+
             </div>
             <div class="container__distinitions">
                <div class="destinitions__change">
