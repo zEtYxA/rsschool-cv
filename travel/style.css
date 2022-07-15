@@ -667,7 +667,7 @@ line-height: 24px;
 color: #0D606F;
  }
  .conteiner__block{
-text-align: center;
+text-align: end;
  }
   /*3 steps  styles end*/
 .destinations__title{
@@ -680,6 +680,14 @@ line-height: 53px;
   margin-bottom: 46px;
   color: #F2785C;
   text-align: center;
+}
+.destinations__arrow-l{
+  position: relative;
+  display: none;
+}
+.destinations__arrow-r{
+  position: relative;
+  display: none;
 }
 .destinations-country{
   display: none;
@@ -1112,6 +1120,20 @@ margin-bottom: 20px;
 
 color: #F2785C;
   }
+
+  .destinations__arrow-l{
+  top:140px;
+  left:15px;
+  height:30px;
+    display: block;
+  }
+  .destinations__arrow-r{
+    top:110px;
+  left:330px;
+  height:30px;
+    display: block;
+  }
+
   .destinations__title,.travel__title{
     font-family: 'Red Hat Text';
 font-style: normal;
@@ -1175,6 +1197,7 @@ color: #0D606F;
 .destinations__image{
   display: block;
 }
+
 .container__distinitions{
   margin-top: -40px;
 }
@@ -1182,7 +1205,7 @@ color: #0D606F;
   display: block;
   position: relative;
   top:50px;
-  left: 25px;
+  left: 75px;
   font-family: 'Red Hat Text';
 font-style: normal;
 font-weight: 500;
