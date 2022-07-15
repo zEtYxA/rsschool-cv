@@ -434,6 +434,8 @@ position: fixed;
 top:0;
 left:0;
 width: 100%;
+
+
 background: #F2785CB2;
  }
 
@@ -621,16 +623,7 @@ border-radius: 10px;
    display: flex;
    align-items: center;
     }
-    .search__text{
-      position: absolute;
-      
-      font-family: 'Aleo';
-      font-style: italic;
-      font-weight: 400;
-      font-size: 24px;
-      line-height: 29px;
-      color: #F2785C;
-    }
+   
         .search-form__submit{
       position: relative;
       right: 246px;
@@ -674,7 +667,7 @@ line-height: 24px;
 color: #0D606F;
  }
  .conteiner__block{
-text-align: center;
+text-align: end;
  }
   /*3 steps  styles end*/
 .destinations__title{
@@ -687,6 +680,14 @@ line-height: 53px;
   margin-bottom: 46px;
   color: #F2785C;
   text-align: center;
+}
+.destinations__arrow-l{
+  position: relative;
+  display: none;
+}
+.destinations__arrow-r{
+  position: relative;
+  display: none;
 }
 .destinations-country{
   display: none;
@@ -888,7 +889,7 @@ height: 61px;}
   /* media start */
 
   
-  @media screen and (max-width:390px)
+  @media screen and (max-width:660px)
   
   
   {
@@ -959,59 +960,231 @@ z-index: 11;
  
  
   
-  @media screen and (max-width:1330px){
-    .wrapper{
-      max-width: 1000px;
-    }
-    .wrapper2{
-      max-width: 1000px;
-    }
+@media screen and (max-width:1300px){
+  .header{
+   position: absolute;
   }
-  @media screen and (max-width:1130px){
-    .wrapper{
-      max-width: 900px;
-    }
-    .wrapper2{
-      max-width: 900px;
-    }
-  }
-  @media screen and (max-width:980px){
-  body{
-    min-width: 1000px;
+ 
+
+}
+  @media screen and (max-width:950px){
+  
+              .logo__text{
+                display: none;
+              }
+
+              .search-form__field{
+              height: 48px;
+                }
+
+
+
+                .search-form__field::placeholder{
+                  font-family: 'Aleo';
+                  font-style: italic;
+                  font-weight: 400;
+                  font-size: 14px;
+                  line-height: 17px;
+                  
+                  color: #F2785C;
+                }
+                .search-form__submit{
+                  font-family: 'Red Hat Text';
+              font-style: normal;
+              font-weight: 500;
+              font-size: 14px;
+              line-height: 32px;
+                  background: #0D606F;
+              right: 135px;
+              border-radius: 10px;
+                  width: 128px;
+                  height: 39px;
+                  color: white;
+                  border:0;
+                 
+                }
+                .search-form{
+                 display: flex;
+                 align-items: center;
+                  }
+
+              }
+     
+     @media screen and (max-width:980px){
+
+      .preview__title{
+        display: none;
+      }
+      .preview__text{
+        display: none;
+      }
+    
+      .search-form{
+        margin-left: 40px;
+        margin-top: 67px;
+      }
+      .preview{
+        min-height: 40vh;
       }
       .butt{
-        width: auto;
-        
+        display: none;
       }
+      .footer-text{
+        margin-left: auto;
+      }
+}
+@media screen and (max-width:780px){
+  .travel__photo{
    
+    width: 155px;
+    height: 130px;
   }
-  @media screen and (max-width:390px){
-    .logo__text{
-      display: none;
-    }
-    .preview__title{
-      display: none;
-    }
-    .preview__text{
-      display: none;
+.story__text{
+  font-family: 'Aleo';
+font-style: normal;
+font-weight: 400;
+font-size: 9px;
+line-height: 11px;
+
+color: #0D606F;
+}.story__title{
+  font-family: 'Aleo';
+font-style: normal;
+font-weight: 700;
+font-size: 11px;
+line-height: 13px;
+
+color: #0D606F;
+}
+.read-more{
+  font-family: 'Aleo';
+font-style: normal;
+font-weight: 700;
+font-size: 9px;
+line-height: 11px;
+text-decoration-line: underline;
+
+color: #0D606F;
+}
+}
+  @media screen and (max-width:530px){
+    .preview{
+      min-height: 21vh;
     }
     .header{
       background: none;
-      
-   
+    }
+    .header__burger{
+      height: 15px;
+      width: 25px;
+      margin-top: 43px;
     }
     .search-form{
-      margin-left: 40px;
-      margin-top: 67px;
+      width: 120%;
+      margin-top: 10px;
+      margin-left: 0px;
     }
-    .preview{
-      min-height: 40vh;
+    .serch-form__info{
+      width: 100%;
     }
+.search-form__submit{
+  width: 110px;
+  height: 30px;
+  font-family: 'Red Hat Text';
+font-style: normal;
+font-weight: 500;
+font-size: 11px;
+line-height: 15px;
+right: 85px;
+}
+.search-form__field::placeholder{
+  font-family: 'Aleo';
+  font-style: italic;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  
+  color: #F2785C;
+  }
+  .steps__title{
+    font-family: 'Red Hat Text';
+font-style: normal;
+font-weight: 500;
+font-size: 14px;
+line-height: 19px;
+padding-top: 0px;
+margin-top: 24px;
+margin-bottom: 20px;
+
+
+
+color: #F2785C;
+  }
+
+  .destinations__arrow-l{
+  top:140px;
+  left:15px;
+  height:30px;
+    display: block;
+  }
+  .destinations__arrow-r{
+    top:110px;
+  left:330px;
+  height:30px;
+    display: block;
+  }
+
+  .destinations__title,.travel__title{
+    font-family: 'Red Hat Text';
+font-style: normal;
+font-weight: 500;
+font-size: 14px;
+line-height: 19px;
+/* identical to box height */
+color: #F2785C;
+  }
+.destinations__title{
+  margin-top: 5px;
+  margin-bottom: 0px;
+}
+.destinitions__change,.destinitions__change2{
+  height: 8px;
+  width: 8px;
+}
+
+.container__txt{
+  font-family: 'Aleo';
+font-style: normal;
+font-weight: 400;
+font-size: 10px;
+line-height: 12px;
+
+color: #0D606F;
+}
+.steps__icon{
+  height: 70px;
+  width: auto;
+}
+
+.destinitions__find{
+  margin-bottom:20px ;
+  height: 30px;
+  width: 92px;
+  font-family: Red Hat Text;
+  font-size: 11px;
+  font-weight: 500;
+  line-height: 15px;
+  
+}
+.arrow{
+  width: 8px;
+}
+    
     .destinations__mobile{
       display: block;
       margin: 0 auto;
       height: 100%;
-      width: 100%;
+      width: auto;
     }
     .destinations__pict{
       display:none;
@@ -1024,6 +1197,7 @@ z-index: 11;
 .destinations__image{
   display: block;
 }
+
 .container__distinitions{
   margin-top: -40px;
 }
@@ -1031,7 +1205,7 @@ z-index: 11;
   display: block;
   position: relative;
   top:50px;
-  left: 25px;
+  left: 75px;
   font-family: 'Red Hat Text';
 font-style: normal;
 font-weight: 500;
@@ -1041,6 +1215,35 @@ z-index: 0;
 color: #FFFFFF;
 
 }
+.story-all{
+  padding-top:20px;
+}
+.travel__title{
+  margin-bottom: 20px;
+}
+.travel__find {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  margin-top: 40px;
+  height: 30px;
+  width: 100px;
+  font-family: 'Red Hat Text';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 11px;
+  line-height: 15px;
+  /* identical to box height */
+  
+  display: flex;
+  align-items: center;
+  text-align: right;
+  
+  color: #FFFFFF;
+}
+
+
 .footer-text{
 display: none;
 }
