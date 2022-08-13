@@ -7,13 +7,14 @@
   <link href="assets/favicon.ico" rel="shortcut icon" />
   <link rel="stylesheet" href="css/owfont-regular.css" />
   <link rel="stylesheet" href="css/style.css" />
-  <link rel="stylesheet" href="js/index.js" />
+
   <title>momentum</title>
 </head>
 
 <body>
   <header class="header">
     <div class="player">
+
       <div class="player-controls">
         <button class="play-prev player-icon"></button>
         <button class="play player-icon"></button>
@@ -48,11 +49,42 @@
   <footer class="footer">
     <button class="change-quote"></button>
     <div>
+      <div class="menu">
+        <ul class="menu__catalog">
+          <ul class="menu__lang">
+            <li class="menu__lang-list">Choose setting</li>
+
+          </ul>
+          <ul class="menu__lang">
+            <li class="menu__lang-list">Language(язык)</li>
+            <li class="menu__lang-list">ENG</li>
+            <li class="menu__lang-list">RUS</li>
+          </ul>
+          <ul class="menu__lang">
+            <li class="menu__lang-list">APi директория</li>
+            <li class="menu__lang-list">GitHub</li>
+            <li class="menu__lang-list">Unsplash </li>
+            <li class="menu__lang-list">Flickr API</li>
+
+          </ul>
+          <ul class="menu__lang">
+            <li class="menu__lang-list">For APi </li>
+
+            <li class="menu__lang-list">theme</li>
+
+          </ul>
+        </ul>
+
+      </div>
+      <div class="install">
+        <img src="../assets/svg/options.svg" alt="opt" class="img">
+      </div>
       <div class="quote"></div>
       <div class="author"></div>
     </div>
   </footer>
-  <script src="js/script.js"></script>
+  <script type="module" src="js/script.js"></script>
+  <script type="module" src="js/playList.js"></script>
 </body>
 
 </html>
