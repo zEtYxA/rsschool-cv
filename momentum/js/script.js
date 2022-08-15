@@ -382,7 +382,7 @@ function playAudio() {
    }
    console.log(isPlay);
 }
-import playList from './playList.js';
+import playList from './playList.js.js';
 console.log(playList);
 
 
