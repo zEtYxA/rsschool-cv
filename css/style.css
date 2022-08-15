@@ -295,22 +295,34 @@ body {
 .menu{
   z-index: 20;
   position: absolute;
-  width: 300px;
+  width: 400px;
   height: 300px;
   bottom: 10px;
   left: 29px;
-  background-color: white;
+ 
+  background-color: rgba(214, 178, 178, 0.5);
 }
 .menu__catalog{
         z-index: 21;
     color: black;
 }
-.menu__lang{
+.menu__catalog{
   display: flex;
-  justify-content: space-between;
+}
+.menu__lang{
+ 
+  justify-content: left;
+width: 34%;
   margin-bottom: 10px;
 }
-.menu__lang-list{
-  
-  margin-right: 3px;
+.menu__table{
+  display: flex;
+  justify-content: space-around;
 }
+.menu__lang-list{
+  list-style: none;
+  margin-right: 3px;
+  margin-bottom: 3px;
+}
+
+
