@@ -29,6 +29,8 @@ const FlickrBalance = document.getElementById("Flickr");
 const en = document.getElementById("en");
 const rus = document.getElementById("rus");
 const lang = document.querySelectorAll('.lang');
+const img = document.querySelector('.img');
+const menu = document.querySelector('.menu');
 
 
 
@@ -437,7 +439,10 @@ async function getLinkToImageFLI() {
 
 
 
+img.addEventListener('click', () => {
+   menu.style.display = 'block'
 
+})
 playPrev.addEventListener('click', playPrevf)
 playNext.addEventListener('click', playNextf)
 play.addEventListener('click', playAudio)
