@@ -2,89 +2,119 @@
 <html lang="en">
 
 <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="assets/favicon.ico" rel="shortcut icon" />
+  <link rel="stylesheet" href="css/owfont-regular.css" />
+  <link rel="stylesheet" href="css/style.css" />
 
-   <meta charset="UTF-8">
-   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>CV</title>
-   <link href="/rsschool-cv/style.css" rel="stylesheet">
+  <title>momentum</title>
 </head>
 
+<body>
+  <header class="header">
+    <div class="player">
 
-<body class="bod">
-   <header>
-
-      <h1 class="namee">MAKSIM KUKUZAU</h1>
-
-   </header>
-   <main>
-      <table class="table">
-         <tr>
-            <td class="nav">
-               <img src="images/foto3.png" alt="foto" height="200">
-               <br>
-               <H2 class="mame">Contact:</H2>
-               <ul>
-
-
-                  <li class=" info-nav">
-                     Phone: +(375)-44-7730501(Viber)
-                  </li>
-
-                  <li class=" info">
-                     <nav>
-                        <a href="zmaxet@mail.ru,"> zmaxet@mail.ru</a>
-                     </nav>
-                  <li class=" info">GitHub: zEtYxA</li>
-
-               </ul>
-            </td>
-            <td>
-               <H2 class="mame">Education:</H2>
-               <ul>
-
-                  <li class=" info">Belarusian National Technical University. Specialty - power engineer</li>
-               </ul>
-               <H2 class="mame">Skills:</H2>
-               <ul>
-                  <li class=" info">Pascal</li>
-                  <li class=" info">Delphi</li>
-               </ul>
-               <H2 class="mame">About me:</H2>
-               <ul>
-
-                  <li class=" info">Purposeful. Have experience of working in a team</li>
-               </ul>
-               <H2 class="mame">Code:</H2>
-               <p class="info code">
-                  function multiply(a, b) <br>
-                  { return a * b } let a= multiply(2,2)
-                  <br>
-                  console.log(a)
-               </p>
-               <H2 class="mame">Languages:</H2>
-               <ul>
-
-
-                  <li class=" info">Russian- Native</li>
-                  <li class=" info">English - A1</li>
-               </ul>
-            </td>
-         </tr>
-      </table>
-   </main>
-   <footer>
-      <div class="foot">
-         <span>
-            <a href=https://github.com/zEtYxA>GitHub</a>
-         </span>
-         <span>
-            By made 2022 for <a href=https://rs.school/js>
-               <img src="https://rs.school/images/rs_school_js.svg" alt="logo" width="80"></a>
-         </span>
+      <div class="player-controls">
+        <button class="play-prev player-icon"></button>
+        <button class="play player-icon"></button>
+        <button class="play-next player-icon"></button>
       </div>
-   </footer>
+      <ul class="play-list"></ul>
+    </div>
+    <div class="weather">
+      <input type="text" class="city" />
+      <i class="weather-icon owf"></i>
+      <div class="weather-error"></div>
+      <div class="description-container">
+        <span class="temperature"></span>
+        <span class="weather-description"></span>
+      </div>
+      <div class="wind"></div>
+      <div class="humidity"></div>
+    </div>
+  </header>
+  <main class="main">
+    <div class="slider-icons">
+      <button class="slide-prev slider-icon"></button>
+      <button class="slide-next slider-icon"></button>
+    </div>
+    <time class="time">Hello</time>
+    <date class="date"></date>
+    <div class="greeting-container">
+      <span class="greeting"></span>
+      <input type="text" class="name" />
+    </div>
+  </main>
+  <footer class="footer">
+    <button class="change-quote"></button>
+    <div>
+      <div class="menu">
+        <ul class="menu__lang">
+          <li class="menu__lang-list">Choose setting</li>
 
-</body>
+        </ul>
+        <ul class="menu__catalog">
 
-</html>
+          <ul class="menu__lang">
+            <li class="menu__lang-list">Add/remove elements</li>
+            <li class="menu__lang-list">
+              <input type="checkbox" name="time" value="yes" checked="yes" id="time" class="rechange">
+              time
+            </li>
+            <li class="menu__lang-list">
+              <input type="checkbox" name="date" value="yes" checked="yes" class="rechange" id="date">
+              date
+            </li>
+            <li class="menu__lang-list">
+              <input type="checkbox" name="audio" value="yes" checked="yes" class="rechange" id="audio">
+              audio
+            </li>
+            <li class="menu__lang-list">
+              <input type="checkbox" name="weather" value="yes" checked="yes" id="weather">weather
+            </li>
+            <li class="menu__lang-list">
+              <input type="checkbox" name="quotes" value="yes" checked="yes" id="quotes">
+              quotes
+            </li>
+            <li class="menu__lang-list">
+              <input type="checkbox" name="greet" value="yes" checked="yes" id="greeting">greet
+            </li>
+
+
+
+
+          </ul>
+          <ul class="menu__lang">
+            <li class="menu__lang-list">APi директория:</li>
+            <li class="menu__lang-list">
+              <input type="checkbox" value="yes" checked="yes" id="GitHub">GitHub
+            </li>
+            <li class="menu__lang-list">
+              <input type="checkbox" name="Unsplash" value="yes" id="Unsplash">Unsplash
+            </li>
+            <li class="menu__lang-list">
+              <input type="checkbox" name="Flickr" value="yes" id="Flickr">
+              Flickr API
+            </li>
+
+          </ul>
+          <ul class="menu__lang">
+            <li class="menu__lang-list">Language:</li>
+
+            <li class="menu__lang-list"> <input type="checkbox" name="Flickr" value="yes" checked="yes" id="en"
+                class="lang">en</li>
+            <li class="menu__lang-list"> <input type="checkbox" name="Flickr" value="yes" id="rus" class="lang">rus</li>
+
+          </ul>
+        </ul>
+
+      </div>
+      <div class="install">
+        <img src="../assets/svg/options.svg" alt="opt" class="img">
+      </div>
+      <div class="quote"></div>
+      <div class="author"></div>
+    </div>
+  </footer>
+  <script type="module" src="js/script.js"></script>
+  <script type="module" src="js/playList.js"></script>
