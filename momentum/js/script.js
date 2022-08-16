@@ -9,6 +9,8 @@ const slidePrev = document.querySelector('.slide-prev');
 const weather = document.querySelector('.weather');
 const weatherIcon = document.querySelector('.weather-icon');
 const temperature = document.querySelector('.temperature');
+const wind = document.querySelector('.wind');
+const humidity = document.querySelector('.humidity');
 const weatherDescription = document.querySelector('.weather-description');
 const quote = document.querySelector('.quote');
 const author = document.querySelector('.author');
@@ -31,6 +33,11 @@ const rus = document.getElementById("rus");
 const lang = document.querySelectorAll('.lang');
 const img = document.querySelector('.img');
 const menu = document.querySelector('.menu');
+const li = document.createElement('li');
+const playListplayer = document.querySelector('.play-list');
+
+
+
 
 import playList from './playlist.js';
 
@@ -46,8 +53,8 @@ let ap = 0;
 let playNum = 0;
 
 let isPlay = false;
-const data = new Date();
-const currentTime = data.toLocaleTimeString();
+let data = new Date();
+let currentTime = data.toLocaleTimeString();
 const options = { weekday: 'long', month: 'long', day: 'numeric', timeZone: 'UTC' };
 let currentDate = data.toLocaleDateString('en-EN', options);
 function datelang() {
@@ -186,10 +193,7 @@ FlickrBalance.addEventListener('change', api2)
 
 
 function langechangeen() {
-
-
    if (en.checked) {
-
       language = 0;
       rus.checked = false;
       getWeather()
@@ -224,6 +228,8 @@ rus.addEventListener('change', langechangerus)
 
 
 function showTime() {
+   data = new Date();
+   currentTime = data.toLocaleTimeString();
    time.textContent = currentTime;
    setTimeout(showTime, 1000);
    showDate()
@@ -305,27 +311,38 @@ slidePrev.addEventListener('click', getSlidePrev)
 
 function setLocalStorage() {
    localStorage.setItem('name', name.value);
+   localStorage.setItem('city', city.value);
+
 }
 function getLocalStorage() {
    if (localStorage.getItem('name')) {
       name.value = localStorage.getItem('name');
+   }
+   if (localStorage.getItem('city')) {
+      city.value = localStorage.getItem('city');
    }
 }
 
 async function getWeather() {
    if (language == 0) {
       const url = `https://api.openweathermap.org/data/2.5/weather?q=${city.value}&lang=en&appid=80c9e01c478e778c841796a3b53ed1d9&units=metric`;
+      if (await (await fetch(url)).statusText == "Not Found") { alert("don't finded city or incorrect name city ") }
       const res = await fetch(url);
       const data = await res.json();
+
       weatherIcon.className = 'weather-icon owf';
       weatherIcon.classList.add(`owf-${data.weather[0].id}`);
-      temperature.textContent = `${data.main.temp}°C`;
+      temperature.textContent = `${Math.round(data.main.temp)}°C`;
+      wind.textContent = `${Math.round(data.wind.speed)} m/s`;
+      humidity.textContent = `${Math.round(data.main.humidity)}%`;
       weatherDescription.textContent = data.weather[0].description;
    }
    if (language == 1) {
       const url = `https://api.openweathermap.org/data/2.5/weather?q=${city.value}&lang=ru&appid=80c9e01c478e778c841796a3b53ed1d9&units=metric`;
+      if (await (await fetch(url)).statusText == "Not Found") { alert("don't finded city or incorrect name city ") }
       const res = await fetch(url);
       const data = await res.json();
+      //if (data.main.temp == 'NaN') { console.log('2 piiza'); }
       weatherIcon.className = 'weather-icon owf';
       weatherIcon.classList.add(`owf-${data.weather[0].id}`);
       temperature.textContent = `${data.main.temp}°C`;
@@ -367,10 +384,35 @@ getQuotes();
 
 //<audio src="...assets\sounds\Aqua Caelestis.mp3" controls></audio>
 const audio = new Audio();
+function playerlistf() {
+   playList.forEach((el, index) => {
+      let wer = document.createElement('li')
+      playListplayer.append(wer)
+      wer.classList.add('playerlist')
+      wer.textContent = el.title;
+   })
+
+}
+playerlistf()
 
 function playAudio() {
+   const playerlist = document.querySelectorAll('.playerlist')
+
+   playerlist.forEach((el, ind) => {
+      if (ind == playNum) {
+         el.style.color = 'red'
+      }
+      else { el.style.color = 'white' }
+   }
+   )
    //audio.src = "assets/sounds/Aqua Caelestis.mp3";
    audio.src = playList[playNum].src;
+   //playListplayer.append(li)
+   //li.classList.add('playerlist')
+
+   //li.textContent = playList[playNum].title;
+   //li.style.color = 'red'
+
    if (!isPlay) {
       audio.currenTime = 0;
       audio.play();
@@ -384,8 +426,8 @@ function playAudio() {
    }
    console.log(isPlay);
 }
-
 console.log(playList);//////////////////////////////////////////////
+
 
 
 function playNextf() {
@@ -413,7 +455,7 @@ async function getLinkToImageUNS() {
    //console.log(data.urls.regular)
    img.src = data.urls.regular;
    img.onload = () => {
-      body.style.background = `url(${data.urls.regular}) `;
+      body.style.background = `url(${data.urls.regular}) ` + 'center/cover, rgba(0, 0, 0, 0.5)';
    }
 
 }
