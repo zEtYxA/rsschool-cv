@@ -263,6 +263,7 @@ function getTimeOfDay() {
 
    //const timeDay = ['night', 'morning', 'afternoon', 'evening']
    //const timeDay = ['ночи', 'утра', 'дня', 'вечера'];
+
    if (Math.trunc(hours / 6) < 1) { return timeDay[0] }
    if (Math.trunc(hours / 6) < 2) { return timeDay[1] }
    if (Math.trunc(hours / 6) < 3) { return timeDay[2] }
@@ -280,7 +281,17 @@ function setBg() {
    let timeOfDay = getTimeOfDay()
    const img = new Image();
    if (ap == 0) {
-      img.src = `https://raw.githubusercontent.com/zEtYxA/stage1-tasks/assets/images/${timeOfDay}/${randomNum}.jpg`;
+      let timeDayloc;
+      const timeDaylocal = ['night', 'morning', 'afternoon', 'evening'];
+      let hourss = data.getHours();
+      if (Math.trunc(hourss / 6) < 1) { timeDayloc = timeDaylocal[0] }
+      if (Math.trunc(hourss / 6) < 2) { timeDayloc = timeDaylocal[1] }
+      if (Math.trunc(hourss / 6) < 3) { timeDayloc = timeDaylocal[2] }
+      if (Math.trunc(hourss / 6) < 4) { timeDayloc = timeDaylocal[3] }
+
+
+
+      img.src = `https://raw.githubusercontent.com/zEtYxA/stage1-tasks/assets/images/${timeDayloc}/${randomNum}.jpg`;
 
 
       img.onload = () => {
@@ -366,7 +377,9 @@ async function getWeather() {
       //if (data.main.temp == 'NaN') { console.log('2 piiza'); }
       weatherIcon.className = 'weather-icon owf';
       weatherIcon.classList.add(`owf-${data.weather[0].id}`);
-      temperature.textContent = `${data.main.temp}°C`;
+      temperature.textContent = `${Math.round(data.main.temp)}°C`;
+      wind.textContent = `${Math.round(data.wind.speed)} м/с`;
+      humidity.textContent = `${Math.round(data.main.humidity)}%`;
       weatherDescription.textContent = data.weather[0].description;
    }
 
