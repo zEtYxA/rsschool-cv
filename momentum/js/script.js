@@ -32,7 +32,7 @@ const lang = document.querySelectorAll('.lang');
 const img = document.querySelector('.img');
 const menu = document.querySelector('.menu');
 
-import playList from './playlist.js';
+import playlist from './playlist.js';
 
 
 const rechange = document.querySelectorAll('.rechange');
