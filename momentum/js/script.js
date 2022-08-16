@@ -47,9 +47,6 @@ let randomNum = '01';
 let n = 18;
 let language = 0;
 let ap = 0;
-
-
-
 let playNum = 0;
 
 let isPlay = false;
@@ -58,7 +55,6 @@ let currentTime = data.toLocaleTimeString();
 const options = { weekday: 'long', month: 'long', day: 'numeric', timeZone: 'UTC' };
 let currentDate = data.toLocaleDateString('en-EN', options);
 function datelang() {
-   console.log('asda');
    if (language == 0) {
       currentDate = data.toLocaleDateString('en-EN', options);
    }
@@ -69,9 +65,27 @@ function datelang() {
 }
 //datelang()
 
-const timeOfDay = getTimeOfDay();
-const greetingText = `Good ${timeOfDay}`;
+let timeOfDay = getTimeOfDay();
+let greetingText = `Good ${timeOfDay}`;
 greeting.textContent = greetingText;
+
+
+function changeGreet() {
+   if (language == 0) {
+      timeOfDay = getTimeOfDay();
+      greetingText = `Good ${timeOfDay}`;
+      greeting.textContent = greetingText;
+
+   }
+   if (language == 1) {
+      timeOfDay = getTimeOfDay();
+      greetingText = `Прекрасная  ${timeOfDay}`;
+      greeting.textContent = greetingText;
+
+   }
+
+
+}
 
 
 
@@ -199,6 +213,7 @@ function langechangeen() {
       getWeather()
       getQuotes()
       datelang()
+      changeGreet()
    }
 
 }
@@ -212,6 +227,9 @@ function langechangerus() {
       getWeather()
       getQuotes()
       datelang()
+      //getTimeOfDay()
+      changeGreet()
+
    }
 
 }
@@ -239,8 +257,11 @@ showTime();
 function showDate() { date.textContent = currentDate; }
 function getTimeOfDay() {
    const hours = data.getHours();
-   const timeDay = ['night', 'morning', 'afternoon', 'evening']
+   let timeDay;
+   if (language == 1) { timeDay = ['ночь', 'утро', 'день', 'вечер'] }
+   if (language == 0) { timeDay = ['night', 'morning', 'afternoon', 'evening'] }
 
+   //const timeDay = ['night', 'morning', 'afternoon', 'evening']
    //const timeDay = ['ночи', 'утра', 'дня', 'вечера'];
    if (Math.trunc(hours / 6) < 1) { return timeDay[0] }
    if (Math.trunc(hours / 6) < 2) { return timeDay[1] }
@@ -367,7 +388,7 @@ async function getQuotes() {
       author.textContent = data[num].author;
    }
    if (language == 1) {
-      // console.log('fyfel');
+
       const quotes = 'data1.json';
       const res = await fetch(quotes);
       const data = await res.json();
@@ -424,9 +445,9 @@ function playAudio() {
       isPlay = false;
       play.classList.toggle('pause');
    }
-   console.log(isPlay);
+
 }
-console.log(playList);//////////////////////////////////////////////
+////////////////////////////////////////////
 
 
 
@@ -435,7 +456,7 @@ function playNextf() {
    if (playNum < (playList.length - 1)) { playNum++ } else { playNum = 0 }
    isPlay = false;
    playAudio()
-   console.log(playNum);
+
 
 }
 function playPrevf() {
@@ -443,7 +464,7 @@ function playPrevf() {
    if (playNum === 0) { playNum = playList.length - 1 } else { playNum = playNum - 1 }
    isPlay = false;
    playAudio()
-   console.log(playNum);
+
 }
 
 
@@ -482,7 +503,7 @@ async function getLinkToImageFLI() {
 
 
 img.addEventListener('click', () => {
-   console.log(menu.classList);
+
    menu.classList.toggle('menu__change');
 
 
