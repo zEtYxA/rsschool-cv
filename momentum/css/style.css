@@ -292,14 +292,16 @@ body {
   height: 50px;
   width: 50px;
 }
+.menu__change{
+  display: none;
+}
 .menu{
-  display: none;;
   z-index: 20;
   position: absolute;
   width: 400px;
   height: 300px;
   bottom: 10px;
-  left: 29px;
+  left: 80px;
  
   background-color: rgba(214, 178, 178, 0.5);
 }
