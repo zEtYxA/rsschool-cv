@@ -210,6 +210,7 @@ function langechangeen() {
    if (en.checked) {
       language = 0;
       rus.checked = false;
+      city.value = 'Minsk'
       getWeather()
       getQuotes()
       datelang()
@@ -224,6 +225,7 @@ function langechangerus() {
    if (rus.checked) {
       language = 1
       en.checked = false
+      city.value = 'Минск'
       getWeather()
       getQuotes()
       datelang()

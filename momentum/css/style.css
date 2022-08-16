@@ -20,6 +20,7 @@ body {
   background: url("../assets/img/bg.jpg") center/cover, rgba(0, 0, 0, 0.5);
   background-blend-mode: multiply;
   transition: background-image 1s ease-in-out;
+  
 }
 
 .header {
@@ -128,6 +129,7 @@ body {
   width: 180px;
   min-height: 180px;  
   text-align: left;
+  transition: ease-in-out .5s;
 }
 
 .weather-error {
@@ -200,6 +202,7 @@ body {
   font-family: 'Arial-MT';
   font-size: 100px;
   letter-spacing: -4px;  
+  transition: 1s;
 }
 
 .date {
