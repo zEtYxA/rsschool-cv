@@ -14,7 +14,5 @@ const playList = [
       src: '../momentum/assets/sounds/Ennio Morricone.mp3',
       duration: '03:50'
    }
-
-
 ]
 export default playList;
