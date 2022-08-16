@@ -32,7 +32,7 @@ const lang = document.querySelectorAll('.lang');
 const img = document.querySelector('.img');
 const menu = document.querySelector('.menu');
 
-
+import playList from './playList.js';
 
 
 const rechange = document.querySelectorAll('.rechange');
@@ -384,8 +384,8 @@ function playAudio() {
    }
    console.log(isPlay);
 }
-import playList from './playList.js';
-console.log(playList);
+
+console.log(playList);//////////////////////////////////////////////
 
 
 function playNextf() {
@@ -442,7 +442,9 @@ async function getLinkToImageFLI() {
 img.addEventListener('click', () => {
    menu.style.display = 'block'
 
+
 })
+//body.addEventListener('click', () => { console.log(event.target); })
 playPrev.addEventListener('click', playPrevf)
 playNext.addEventListener('click', playNextf)
 play.addEventListener('click', playAudio)
