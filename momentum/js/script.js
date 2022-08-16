@@ -32,7 +32,7 @@ const lang = document.querySelectorAll('.lang');
 const img = document.querySelector('.img');
 const menu = document.querySelector('.menu');
 
-import playList from './playList.js';
+import playList from './playlist.js';
 
 
 const rechange = document.querySelectorAll('.rechange');
@@ -440,7 +440,8 @@ async function getLinkToImageFLI() {
 
 
 img.addEventListener('click', () => {
-   menu.style.display = 'block'
+   console.log(menu.classList);
+   menu.classList.toggle('menu__change');
 
 
 })
