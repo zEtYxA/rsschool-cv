@@ -1,0 +1,61 @@
+.container__list{
+     
+      min-height: 100vh;
+      background: url(.//assets/home.png) no-repeat;
+      background-size: cover;
+     
+}
+.img{
+   max-height: 350px;
+  
+ 
+}
+
+.centr{
+  display: flex;
+justify-content: right;
+}
+.container__logo{
+  color: white;
+  display: flex;
+  justify-content: space-around;
+}
+.colode{
+  width: 100px;
+  height: 200px;
+  display: none;
+}
+.pict{
+  width: 200px;
+  height: 300px;
+  display: none;
+}
+.green{
+  font-size: 30px;
+  background-color: green;
+  border-radius: 40%;
+}
+.blue{
+  font-size: 30px;
+  background-color: blue;
+  border-radius: 40%;
+}
+.brown{
+  font-size: 30px;
+  background-color: brown;
+  border-radius: 40%;
+}
+.level{
+  margin-top: 40px;
+}
+.level-l{
+  font-size: 30px;
+  color: white;
+  border: 3px solid #00af64;
+  margin-right: 100px;
+  display: none;
+ 
+}
+.rechange{
+  display: none;
+}
