@@ -3,7 +3,7 @@
 ## Contacts:
  * Phone: +(375)-44-7730501(Viber),
 
- * [E-mail:] zmaxet@mail.ru,
+ * [E-mail:] zmaxet@mail.ru
 
  * GitHub:zEtYxA.
 
@@ -11,7 +11,7 @@
 ##### _Purposeful. Have experience of working in a team._
 
 ## Skills:
-* Pascal  
+* Pascal  github
 
 * Delphi  
 
