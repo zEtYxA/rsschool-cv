@@ -27,7 +27,7 @@ console.log(a)`
  * Belarusian National Technical University. Specialty - power engineer,
 
 ### Languages:
- * Russian- Native,
+ * Russian- Native
 
  * English - A1
 
