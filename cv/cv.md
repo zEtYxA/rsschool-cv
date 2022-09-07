@@ -1,7 +1,7 @@
 # MAKSIM KUKUZAU
 *****
 ## Contacts:
- * Phone: +(375)-44-7730501(Viber),
+ * Phone: +(375)-44-7730501(Viber)
 
  * [E-mail:] zmaxet@mail.ru
 
@@ -29,7 +29,7 @@ console.log(a)`
 ### Languages:
  * Russian- Native,
 
- * English - A1.
+ * English - A1
 
 
 
