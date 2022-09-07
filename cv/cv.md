@@ -5,7 +5,7 @@
 
  * [E-mail:] zmaxet@mail.ru
 
- * GitHub:zEtYxA.
+ * GitHub:zEtYxAg
 
 ## About me:
 ##### _Purposeful. Have experience of working in a team._
